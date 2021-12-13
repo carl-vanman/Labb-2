@@ -1,7 +1,7 @@
 .hero {
-    margin-top: calc(var(--padding-top) + 90px);
+    /* margin-top: calc(var(--padding-top) + 90px);
     padding-bottom: 45px;
-    row-gap: 90px;
+    row-gap: 90px; */
     align-items: center;
 }
 

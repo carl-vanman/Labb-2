@@ -1,18 +1,36 @@
-.wrapper {
+/* .wrapper {
     padding: 45px 0px;
-}
+} */
 
 .subtitle {
-    padding: 8px 0px;
+    /* padding: 8px 0px; */
+    padding: 24px 0px;
     grid-column: 2 / -2;
+    align-self: end;
 }
 
 .paragraph {
     grid-column: 2;
     grid-row: 2;
     padding: 24px 48px;
-
+    margin-left: 0px;
     border-left: 2px solid var(--clr-main);
+    animation: slideIn 650ms ease-out;
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        margin-left: 20px;
+    }
+    100% {
+        opacity: 1;
+        margin-left: 0px;
+    }
 }
 
 .twoColumn {

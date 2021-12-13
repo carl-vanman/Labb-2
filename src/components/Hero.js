@@ -40,14 +40,16 @@ const Hero = () => {
     };
 
     return (
-        <section className={`${generalStyles.wrapper} ${heroStyles.hero}`}>
+        <section
+            className={`${generalStyles.wrapper} ${generalStyles.section} ${heroStyles.hero}`}
+        >
             <div className={heroStyles.imageContainer}>
                 <img src={image.file.url} alt={image.description} />
             </div>
             <div className={heroStyles.textContainer}>
                 <div
                     className={
-                        sticky < 40
+                        sticky < 1
                             ? `${heroStyles.greeting}`
                             : `${heroStyles.greeting} ${heroStyles.hide}`
                     }
@@ -59,7 +61,7 @@ const Hero = () => {
                 </div>
                 <div
                     className={
-                        sticky < 40
+                        sticky < 1
                             ? `${heroStyles.application} ${heroStyles.hide}`
                             : `${heroStyles.application}`
                     }
@@ -76,3 +78,5 @@ const Hero = () => {
 };
 
 export default Hero;
+
+/* was "sticky < 40" before a added generalStyle.section min-width 100vw*/

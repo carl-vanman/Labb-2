@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    padding: 0px 2vw;
 }
 
 :root {
@@ -38,6 +39,10 @@ html {
     /* grid-auto-rows: auto; */
 }
 
+.section {
+    min-height: 100vh;
+}
+
 ul {
     list-style-type: none;
 }
@@ -67,8 +72,8 @@ button::after {
     content: "";
     top: 0;
     bottom: 0;
-    left: 0;
     width: 0%;
+    right: 0;
     display: block;
     background-color: var(--clr-main);
     z-index: -999;
@@ -92,6 +97,8 @@ button:hover {
 button:hover::after {
     display: block;
     width: 100%;
+    left: 0;
+    right: -100%;
     animation: buttonActive var(--transition-200);
 }
 

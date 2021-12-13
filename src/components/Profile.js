@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import * as textStyles from "../styles/text.module.css";
 import * as generalStyles from "../styles/general.module.css";
@@ -18,11 +18,31 @@ const Profile = () => {
     `);
 
     const profileData = data.allContentfulProfile.nodes[0].about;
-    console.log(profileData.about.length);
+
+    /* test, hade velat flytta till general.module.css */
+    useEffect(() => {
+        window.addEventListener("scroll", slideIn);
+        return () => {
+            window.removeEventListener("scroll", slideIn);
+        };
+    });
+
+    let intViewportHeight = window.innerHeight / 2;
+
+    const slideIn = (e) => {
+        const scrollTop = window.scrollY;
+        const showParagraph = document.querySelector("#paragraph");
+
+        scrollTop > intViewportHeight
+            ? showParagraph.classList.remove(`${profileStyles.hide}`)
+            : showParagraph.classList.add(`${profileStyles.hide}`);
+    };
+    /* test end */
 
     return (
         <section
-            className={`${generalStyles.wrapper} ${profileStyles.wrapper}`}
+            id="profil"
+            className={`${generalStyles.wrapper} ${generalStyles.section} ${profileStyles.wrapper}`}
         >
             <h4
                 className={`${textStyles.subtitle} ${textStyles.blue} ${profileStyles.subtitle}`}
@@ -30,7 +50,7 @@ const Profile = () => {
                 Profil
             </h4>
             <p
-                id="profil"
+                id="paragraph"
                 className={
                     profileData.about.length > 700
                         ? `${textStyles.paragraph} ${profileStyles.paragraph} ${profileStyles.twoColumn}`
