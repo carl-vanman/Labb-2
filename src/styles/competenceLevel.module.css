@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    gap: 0.5em;
+    padding: 8px 0px;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--clr-main);
+    border-radius: 100vw;
+}
+
+.fill {
+    background-color: var(--clr-main);
+}

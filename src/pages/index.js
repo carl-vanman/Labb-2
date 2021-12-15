@@ -1,4 +1,5 @@
 import * as React from "react";
+import Competence from "../components/Competence";
 import Hero from "../components/Hero";
 import Navigation from "../components/Navigation";
 import Profile from "../components/Profile";
@@ -16,6 +17,7 @@ const IndexPage = () => {
             <main>
                 <Hero />
                 <Profile />
+                <Competence />
             </main>
         </>
     );

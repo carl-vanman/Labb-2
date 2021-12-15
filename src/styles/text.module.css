@@ -24,3 +24,22 @@
     font-size: var(--body-size);
     font-weight: var(--font-light);
 }
+
+/* Text Colors */
+.clrDark {
+    color: var(--clr-dark);
+}
+
+.clrLight {
+    color: var(--clr-light);
+}
+
+.clrMain {
+    color: var(--clr-main);
+}
+
+/* Text Alignment in grid */
+
+.alignCenter {
+    align-self: center;
+}

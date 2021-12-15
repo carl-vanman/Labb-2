@@ -68,7 +68,8 @@ const Hero = () => {
                 >
                     <h4 className={textStyles.subtitle}>{currentPosition}</h4>
                     <p className={textStyles.paragraph}>
-                        Söker tjänsten hos er som {positionApplying}
+                        Söker tjä
+                        <span>nsten hos er som {positionApplying}</span>
                     </p>
                     <button>TA KONTAKT</button>
                 </div>

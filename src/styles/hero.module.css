@@ -65,3 +65,12 @@
         opacity: 0;
     }
 }
+
+span {
+    text-decoration: underline;
+    text-decoration-color: var(--clr-main);
+    text-underline-offset: 4px;
+    /* background-color: var(--clr-main);
+    color: var(--clr-light);
+    padding: 0px 4px; */
+}

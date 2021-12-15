@@ -35,7 +35,14 @@ const Navigation = () => {
                     </a>
                 </li>
                 <li className={navStyles.navItem}>
-                    <a href="https://www.google.se">Kompetenser</a>
+                    <a
+                        href="#kompetens"
+                        className={
+                            isActive === "#kompetens" ? navStyles.active : ""
+                        }
+                    >
+                        Kompetenser
+                    </a>
                 </li>
                 <li className={navStyles.navItem}>
                     <a href="https://www.google.se">Arbetslivserfarenhet</a>

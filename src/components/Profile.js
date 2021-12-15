@@ -42,7 +42,7 @@ const Profile = () => {
     return (
         <section
             id="profil"
-            className={`${generalStyles.wrapper} ${generalStyles.section} ${profileStyles.wrapper}`}
+            className={`${generalStyles.wrapper} ${generalStyles.section}`}
         >
             <h4
                 className={`${textStyles.subtitle} ${textStyles.blue} ${profileStyles.subtitle}`}
@@ -64,3 +64,10 @@ const Profile = () => {
 };
 
 export default Profile;
+
+/* 
+<section
+            id="profil"
+            className={`${generalStyles.wrapper} ${generalStyles.section} ${profileStyles.wrapper}`}
+        >
+*/
