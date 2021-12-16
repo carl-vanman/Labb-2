@@ -1,6 +1,5 @@
 .textContainer {
     padding-top: 24px;
-    grid-column: 2;
     grid-column: 2 / -2;
 
     display: flex;

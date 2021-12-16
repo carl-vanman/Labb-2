@@ -2,8 +2,6 @@ import React from "react";
 import * as competenceLevelStyles from "../styles/competenceLevel.module.css";
 
 const CompetenceLevel = ({ level }) => {
-    console.log("level", level);
-
     return (
         <div className={competenceLevelStyles.container}>
             {level === 1 ? (

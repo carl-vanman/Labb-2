@@ -3,6 +3,7 @@ import Competence from "../components/Competence";
 import Hero from "../components/Hero";
 import Navigation from "../components/Navigation";
 import Profile from "../components/Profile";
+import Experience from "../components/Experience";
 //import * as generalStyles from "../styles/general.module.css";
 
 /* can I track cordinates for each element and use for scroll to in nav and change
@@ -18,6 +19,7 @@ const IndexPage = () => {
                 <Hero />
                 <Profile />
                 <Competence />
+                <Experience />
             </main>
         </>
     );

@@ -123,3 +123,10 @@ button:hover::after {
 .alignCenter {
     align-self: center;
 }
+
+/* Justify in grid */
+.justifyCenter {
+    justify-items: center;
+}
+
+/*  for section: - align-content: baseline; */

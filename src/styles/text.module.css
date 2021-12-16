@@ -43,3 +43,7 @@
 .alignCenter {
     align-self: center;
 }
+
+.flexEnd {
+    align-self: flex-end;
+}

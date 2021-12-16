@@ -1,0 +1,38 @@
+.textContainer {
+    padding-top: 24px;
+    grid-column: 2 / -2;
+}
+
+.experienceWrapper {
+    grid-column: 2 / -2;
+    grid-row: 3;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.experienceContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.experienceContainerSec {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-self: end;
+}
+
+.latest {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end;
+}
+
+.oldest {
+    grid-column: 3;
+    grid-row: 4;
+    justify-self: end;
+}
