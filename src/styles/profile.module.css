@@ -1,9 +1,4 @@
-/* .wrapper {
-    padding: 45px 0px;
-} */
-
 .subtitle {
-    /* padding: 8px 0px; */
     padding: 24px 0px;
     grid-column: 2 / -2;
     align-self: end;

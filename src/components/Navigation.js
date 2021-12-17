@@ -8,7 +8,6 @@ const Navigation = () => {
     console.log(isActive);
 
     return (
-        /* nav will be the wrapper/ container */
         <nav className={`${generalStyles.wrapper} ${navStyles.nav}`}>
             <ul className={navStyles.navContainer}>
                 <li className={navStyles.navItem}>
@@ -57,10 +56,25 @@ const Navigation = () => {
                     </a>
                 </li>
                 <li className={navStyles.navItem}>
-                    <a href="https://www.google.se">utbildning</a>
+                    <a
+                        href="#utbildning"
+                        className={
+                            isActive === "#utbildning" ? navStyles.active : ""
+                        }
+                    >
+                        utbildning
+                    </a>
                 </li>
                 <li className={navStyles.navItem}>
-                    <a href="https://www.google.se">Kontakt</a>
+                    <a
+                        href="#kontakt"
+                        className={
+                            isActive === "#kontakt" ? navStyles.active : ""
+                        }
+                    >
+                        {" "}
+                        Kontakt
+                    </a>
                 </li>
             </ul>
         </nav>

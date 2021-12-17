@@ -1,0 +1,9 @@
+.container {
+    padding: 24px 48px;
+    width: 400px;
+    border: 1px solid var(--clr-main);
+}
+
+.container:hover {
+    background-color: var(--clr-main);
+}

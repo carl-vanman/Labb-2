@@ -5,11 +5,9 @@ import Navigation from "../components/Navigation";
 import Profile from "../components/Profile";
 import Experience from "../components/Experience";
 import Divider from "../components/Divider";
-//import * as generalStyles from "../styles/general.module.css";
+import Education from "../components/Education";
+import Contact from "../components/Contact";
 
-/* can I track cordinates for each element and use for scroll to in nav and change
-what nav link is active?
-*/
 const IndexPage = () => {
     return (
         <>
@@ -22,6 +20,9 @@ const IndexPage = () => {
                 <Competence />
                 <Divider />
                 <Experience />
+                <Divider />
+                <Education />
+                <Contact />
             </main>
         </>
     );

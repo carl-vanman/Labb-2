@@ -1,8 +1,7 @@
 .hero {
-    /* margin-top: calc(var(--padding-top) + 90px);
-    padding-bottom: 45px;
-    row-gap: 90px; */
     align-items: center;
+    min-height: 100vh;
+    padding: 0px 2vw;
 }
 
 .imageContainer {
@@ -70,7 +69,8 @@ span {
     text-decoration: underline;
     text-decoration-color: var(--clr-main);
     text-underline-offset: 4px;
-    /* background-color: var(--clr-main);
+}
+
+.contactLink:hover {
     color: var(--clr-light);
-    padding: 0px 4px; */
 }

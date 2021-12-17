@@ -34,7 +34,9 @@ const Competence = () => {
             <div
                 className={`${generalStyles.alignCenter} ${competenceStyles.textContainer}`}
             >
-                <h2 className={`${textStyles.title} ${textStyles.clrLight}`}>
+                <h2
+                    className={`${textStyles.title} ${textStyles.clrLight} ${textStyles.titlePadding}`}
+                >
                     Kompetens
                 </h2>
                 <div className={competenceStyles.levelContainer}>

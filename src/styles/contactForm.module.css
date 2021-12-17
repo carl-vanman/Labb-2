@@ -1,0 +1,26 @@
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px;
+    max-width: 400px;
+}
+
+.labelLayout {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    height: 32px;
+    border: 1px solid var(--clr-dark);
+}
+
+.textArea {
+    min-height: 344px;
+    border: 1px solid var(--clr-dark);
+}
+
+.buttonLayout {
+    align-self: flex-end;
+}

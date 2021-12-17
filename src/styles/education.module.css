@@ -3,7 +3,7 @@
     grid-column: 2 / -2;
 }
 
-.experienceWrapper {
+.educationWrapper {
     grid-column: 2 / -2;
     grid-row: 3;
 
@@ -14,7 +14,7 @@
     margin: 24px 0px;
 }
 
-.experienceContainer {
+.educationContainer {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -22,7 +22,7 @@
     align-self: flex-start;
 }
 
-.experienceContainerSec {
+.educationContainerSec {
     display: flex;
     flex-direction: column;
     gap: 24px;

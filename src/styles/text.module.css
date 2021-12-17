@@ -1,18 +1,14 @@
-.blue {
-    color: var(--clr-main);
-}
-
-.light {
-    color: var(--clr-light);
-}
-
 .regular {
     font-weight: var(--font-regular);
 }
 
 .title {
-    font-size: var(--title-size);
+    font-size: clamp(var(--subtitle-size), 10vw, var(--title-size));
     font-weight: var(--font-bold);
+}
+
+.titlePadding {
+    padding-bottom: 40px;
 }
 
 .subtitle {

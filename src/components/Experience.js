@@ -54,7 +54,9 @@ const Experience = () => {
             <div
                 className={`${generalStyles.alignCenter} ${experienceStyles.textContainer}`}
             >
-                <h2 className={`${textStyles.title} ${textStyles.clrLight}`}>
+                <h2
+                    className={`${textStyles.title} ${textStyles.clrLight} ${textStyles.titlePadding}`}
+                >
                     Arbetslivserfarenhet
                 </h2>
             </div>

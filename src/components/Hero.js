@@ -3,18 +3,13 @@ import { useStaticQuery, graphql } from "gatsby";
 import * as textStyles from "../styles/text.module.css";
 import * as heroStyles from "../styles/hero.module.css";
 import * as generalStyles from "../styles/general.module.css";
+import Img from "./Img";
 
 const Hero = () => {
     const data = useStaticQuery(graphql`
         query HeroQuery {
             allContentfulHero {
                 nodes {
-                    image {
-                        description
-                        file {
-                            url
-                        }
-                    }
                     name
                     currentPosition
                     positionApplying
@@ -23,20 +18,20 @@ const Hero = () => {
         }
     `);
 
-    const [sticky, setSticky] = useState(0);
+    const [showOnScroll, setShowOnScroll] = useState(0);
     const heroData = data.allContentfulHero.nodes[0];
-    const { image, name, currentPosition, positionApplying } = heroData;
+    const { name, currentPosition, positionApplying } = heroData;
 
     useEffect(() => {
-        window.addEventListener("scroll", isSticky);
+        window.addEventListener("scroll", onScroll);
         return () => {
-            window.removeEventListener("scroll", isSticky);
+            window.removeEventListener("scroll", onScroll);
         };
     });
 
-    const isSticky = (e) => {
+    const onScroll = (e) => {
         const scrollTop = window.scrollY;
-        setSticky(scrollTop);
+        setShowOnScroll(scrollTop);
     };
 
     return (
@@ -44,24 +39,24 @@ const Hero = () => {
             className={`${generalStyles.wrapper} ${generalStyles.section} ${heroStyles.hero}`}
         >
             <div className={heroStyles.imageContainer}>
-                <img src={image.file.url} alt={image.description} />
+                <Img />
             </div>
             <div className={heroStyles.textContainer}>
                 <div
                     className={
-                        sticky < 1
+                        showOnScroll < 1
                             ? `${heroStyles.greeting}`
                             : `${heroStyles.greeting} ${heroStyles.hide}`
                     }
                 >
                     <h2 className={textStyles.title}>Hi, I'm</h2>
-                    <h2 className={`${textStyles.title} ${textStyles.blue}`}>
+                    <h2 className={`${textStyles.title} ${textStyles.clrMain}`}>
                         {name}
                     </h2>
                 </div>
                 <div
                     className={
-                        sticky < 1
+                        showOnScroll < 1
                             ? `${heroStyles.application} ${heroStyles.hide}`
                             : `${heroStyles.application}`
                     }
@@ -71,7 +66,9 @@ const Hero = () => {
                         Söker tjä
                         <span>nsten hos er som {positionApplying}</span>
                     </p>
-                    <button>TA KONTAKT</button>
+                    <a class={heroStyles.contactLink} href="#kontakt">
+                        <button>TA KONTAKT</button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -79,5 +76,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-/* was "sticky < 40" before a added generalStyle.section min-width 100vw*/

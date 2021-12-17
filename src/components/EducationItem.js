@@ -1,21 +1,21 @@
 import React from "react";
-import * as ExperienceItemStyles from "../styles/experienceItem.module.css";
+import * as educationItemStyles from "../styles/educationItem.module.css";
 import * as textStyles from "../styles/text.module.css";
 
-const ExperienceItem = ({ item }) => {
+const EducationItem = ({ item }) => {
     return (
-        <div className={`${ExperienceItemStyles.container}`}>
+        <div className={`${educationItemStyles.container}`}>
             <p className={`${textStyles.paragraph} ${textStyles.clrLight}`}>
-                {item.position}
+                {item.name}
             </p>
             <p className={`${textStyles.paragraph} ${textStyles.clrLight}`}>
-                {item.company}
+                {item.program}
             </p>
             <p className={`${textStyles.paragraph} ${textStyles.clrLight}`}>
                 {item.locationCity} {item.locationCountry}
             </p>
             <p className={`${textStyles.paragraph} ${textStyles.clrLight}`}>
-                {item.dateFrom} till {item.dateEnd}
+                {item.dateFrom} till {item.dateTo}
             </p>
             <p className={`${textStyles.paragraph} ${textStyles.clrLight}`}>
                 {item.description}
@@ -24,4 +24,4 @@ const ExperienceItem = ({ item }) => {
     );
 };
 
-export default ExperienceItem;
+export default EducationItem;

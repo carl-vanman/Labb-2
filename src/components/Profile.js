@@ -19,7 +19,6 @@ const Profile = () => {
 
     const profileData = data.allContentfulProfile.nodes[0].about;
 
-    /* test, hade velat flytta till general.module.css */
     useEffect(() => {
         window.addEventListener("scroll", slideIn);
         return () => {
@@ -27,7 +26,8 @@ const Profile = () => {
         };
     });
 
-    let intViewportHeight = window.innerHeight / 2;
+    /* Breakepoint when to be showned */
+    let intViewportHeight = window.innerHeight / 6;
 
     const slideIn = (e) => {
         const scrollTop = window.scrollY;
@@ -37,7 +37,6 @@ const Profile = () => {
             ? showParagraph.classList.remove(`${profileStyles.hide}`)
             : showParagraph.classList.add(`${profileStyles.hide}`);
     };
-    /* test end */
 
     return (
         <section
@@ -45,7 +44,7 @@ const Profile = () => {
             className={`${generalStyles.wrapper} ${generalStyles.section}`}
         >
             <h4
-                className={`${textStyles.subtitle} ${textStyles.blue} ${profileStyles.subtitle}`}
+                className={`${textStyles.subtitle} ${textStyles.clrMain} ${profileStyles.subtitle}`}
             >
                 Profil
             </h4>
@@ -64,10 +63,3 @@ const Profile = () => {
 };
 
 export default Profile;
-
-/* 
-<section
-            id="profil"
-            className={`${generalStyles.wrapper} ${generalStyles.section} ${profileStyles.wrapper}`}
-        >
-*/
