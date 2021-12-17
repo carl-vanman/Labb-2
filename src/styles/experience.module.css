@@ -10,12 +10,15 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: 24px 0px;
 }
 
 .experienceContainer {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    height: 100%;
+    align-self: flex-start;
 }
 
 .experienceContainerSec {
@@ -23,6 +26,8 @@
     flex-direction: column;
     gap: 24px;
     justify-self: end;
+    height: 100%;
+    align-self: flex-start;
 }
 
 .latest {
@@ -32,7 +37,7 @@
 }
 
 .oldest {
-    grid-column: 3;
-    grid-row: 4;
-    justify-self: end;
+    /* grid-column: 3;
+    grid-row: 4; */
+    align-self: flex-end;
 }

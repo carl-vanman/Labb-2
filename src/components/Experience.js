@@ -33,7 +33,10 @@ const Experience = () => {
         setSliceArray((prev) => !prev);
         if (experienceList.length > 1) {
             const arrayLength = experienceList.length;
-            const middleIndex = Math.floor(arrayLength / 2);
+            let middleIndex = Math.floor(arrayLength / 2);
+            if (arrayLength % 2) {
+                middleIndex = middleIndex + 1;
+            }
             setFirstExperienceList(experienceList.slice(0, middleIndex));
             setSecondExperienceList(
                 experienceList.slice(middleIndex, arrayLength)
@@ -46,7 +49,7 @@ const Experience = () => {
     return (
         <section
             id="arbetslivserfarenhet"
-            className={`${generalStyles.wrapper} ${generalStyles.section} ${generalStyles.bgColorDark} ${generalStyles.bgColorDark}`}
+            className={`${generalStyles.wrapper} ${generalStyles.section} ${generalStyles.bgColorDark}`}
         >
             <div
                 className={`${generalStyles.alignCenter} ${experienceStyles.textContainer}`}
@@ -74,13 +77,13 @@ const Experience = () => {
                     {secondExperienceList.map((item) => {
                         return <ExperienceItem key={item.id} item={item} />;
                     })}
+                    <h4
+                        className={`${textStyles.subtitle} ${textStyles.clrLight} ${experienceStyles.oldest}`}
+                    >
+                        Äldst
+                    </h4>
                 </div>
             </div>
-            <h4
-                className={`${textStyles.subtitle} ${textStyles.clrLight} ${experienceStyles.oldest}`}
-            >
-                Äldst
-            </h4>
         </section>
     );
 };
